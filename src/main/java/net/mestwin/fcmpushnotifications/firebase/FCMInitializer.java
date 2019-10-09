@@ -30,6 +30,7 @@ public class FCMInitializer {
                 logger.info("Firebase application has been initialized");
             }
         } catch (IOException e) {
+            logger.info("ERROR: Firebase application has not been initialized");
             logger.error(e.getMessage());
         }
     }
