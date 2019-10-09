@@ -16,6 +16,7 @@ This is a forked project from https://github.com/imaginalis/spring-boot-fcm-push
 + Change the path and defaults in **application.properties**
 
 PS: FCM Service accont credentials looks like this:
+```
 {
   "type": "service_account",
   "project_id": "",
@@ -28,7 +29,7 @@ PS: FCM Service accont credentials looks like this:
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": ""
 }
-
+```
 
 
 
@@ -36,6 +37,9 @@ PS: FCM Service accont credentials looks like this:
 ## Endpoints
 
 List of all endpoints are located in the http://localhost:9090/swagger-ui.html address. if you want to change the 9090 port, modify the application.properties file.
+
+![alt text](https://github.com/Aramideh/spring-boot-fcm-push-notifications/blob/master/FCM.png "Swagger Ui")
+
 
 + **Success response**
 
@@ -51,6 +55,11 @@ List of all endpoints are located in the http://localhost:9090/swagger-ui.html a
 + Client-side Ionic application: [ionic-fcm-push-notifications](https://github.com/imaginalis/ionic-fcm-push-notifications)
 
 
-## acknowledgment
-This is a fork from https://github.com/imaginalis/spring-boot-fcm-push-notifications
-Sadeq Aramideh , Sadegh.a@gmail.com
+
+### Authors
+* please refer to Acknowledgments section
+* [**Sadeq Aramideh**](https://github.com/Aramideh)
+
+### Acknowledgments
+* [Firebase Cloud Messaging Quickstart](https://github.com/imaginalis/spring-boot-fcm-push-notifications)
+
