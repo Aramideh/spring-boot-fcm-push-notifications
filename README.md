@@ -1,40 +1,41 @@
 # Spring Boot + FCM - simple push notifications server-side application
 ![alt text](https://blog.mestwin.net/wp-content/uploads/2019/06/fcm-spring-boot-result-1-216x300.png "Push notifications - result")
 
+This is a forked project from https://github.com/imaginalis/spring-boot-fcm-push-notifications repository, which i decided to add swagger api to have an elegant documentation and also Spring Boot Web Security Configuration enabled so logging in to the swagge ui will not bes witout some user authentication.
 
-This is simple Spring Boot application with Firebase Cloud Messaging integration.
 
 ## Technologies
 
 + Spring Boot
 + Firebase Cloud Messaging
++ Swagger Api
 
 ## Configuration
 
 + Provide your own Firebase Admin SDK, JSON-formatted file (service account credentials) and place it inside the project (for example _src/resources/google_)
 + Change the path and defaults in **application.properties**
 
+PS: FCM Service accont credentials looks like this:
+{
+  "type": "service_account",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": ""
+}
+
+
+
+
+
 ## Endpoints
 
-
-+ **GET /notification** – Trigger sample notification with default values sending
-
-
-`curl -H "Content-Type: application/json" -X GET http://localhost:8080/notification`
-
-
-+ **POST /notification/topic** – Send a message to a specific topic
-
-
-`curl -d '{"title":"Hello", "message":"The message...", "topic":"contactTopic"}' -H "Content-Type: application/json" -X POST http://localhost:8080/notification/topic`
-
-+ **POST /notification/token** – Send a message to a specific device (with token)
-
-`curl -d '{"title":"Hey you!", "message":"Watch out!", "token":"cct00ebz8eg:APA91bFcTkFE_0Qafj6nWv5yHxqCLTyxAaqi4QzwsFNLP5M9G78X8Z5UMZTW004q1PUux63Ut-1WMGVToMNTdB3ZfO8lCZlc4lGpxm7LBdWfkhaUxdbpQ5xIO5cAb-w9H2dBLNHT7i-U", "topic": ""}' -H "Content-Type: application/json" -X POST http://localhost:8080/notification/token`
-
-+ **POST /notification/data** – Send a message to a specific topic with additional payload data.
-
-`curl -d '{"title":"Hello", "message":"Data message", "topic":"contactTopic"}' -H "Content-Type: application/json" -X POST http://localhost:8080/notification/data`
+List of all endpoints are located in the http://localhost:9090/swagger-ui.html address. if you want to change the 9090 port, modify the application.properties file.
 
 + **Success response**
 
@@ -48,3 +49,8 @@ This is simple Spring Boot application with Firebase Cloud Messaging integration
 + Blog post: [Send push notifications from Spring Boot server-side application using FCM](https://blog.mestwin.net/send-push-notifications-from-spring-boot-server-side-application-using-fcm/)
 
 + Client-side Ionic application: [ionic-fcm-push-notifications](https://github.com/imaginalis/ionic-fcm-push-notifications)
+
+
+## acknowledgment
+This is a fork from https://github.com/imaginalis/spring-boot-fcm-push-notifications
+Sadeq Aramideh , Sadegh.a@gmail.com
