@@ -1,7 +1,7 @@
 # Spring Boot + FCM - simple push notifications server-side application
 ![alt text](https://blog.mestwin.net/wp-content/uploads/2019/06/fcm-spring-boot-result-1-216x300.png "Push notifications - result")
 
-This is a forked project from https://github.com/imaginalis/spring-boot-fcm-push-notifications repository, which i decided to add swagger api to have an elegant documentation and also Spring Boot Web Security Configuration enabled so logging in to the swagge ui will not bes witout some user authentication.
+This is a forked project from https://github.com/imaginalis/spring-boot-fcm-push-notifications repository, which i decided to add swagger api to have an elegant documentation and also Spring Boot Web Security Configuration enabled so logging in to the swagge ui will require user authentication.
 
 
 ## Technologies
